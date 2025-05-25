@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>imageName</key>
+        <string>war_and_peace</string>
+        <key>description</key>
+        <string>Epic novel about the war of 1812</string>
+        <key>author</key>
+        <string>Leo Tolstoy</string>
+        <key>title</key>
+        <string>War and Peace</string>
+    </dict>
+    <dict>
+        <key>imageName</key>
+        <string>crime_and_punishment</string>
+        <key>description</key>
+        <string>Novel about Rodion Raskolnikov</string>
+        <key>author</key>
+        <string>Fyodor Dostoevsky</string>
+        <key>title</key>
+        <string>Crime and Punishment</string>
+    </dict>
+    <dict>
+        <key>imageName</key>
+        <string>nineteen_eighty_four</string>
+        <key>description</key>
+        <string>Dystopian novel about totalitarian society</string>
+        <key>author</key>
+        <string>George Orwell</string>
+        <key>title</key>
+        <string>1984</string>
+    </dict>
+</array>
+</plist>

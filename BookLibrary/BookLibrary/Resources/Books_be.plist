@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>imageName</key>
+        <string>war_and_peace</string>
+        <key>description</key>
+        <string>Раман-эпапея пра вайну 1812 года</string>
+        <key>author</key>
+        <string>Леў Талстой</string>
+        <key>title</key>
+        <string>Вайна і мір</string>
+    </dict>
+    <dict>
+        <key>imageName</key>
+        <string>crime_and_punishment</string>
+        <key>description</key>
+        <string>Раман пра Радзівона Раскольнікава</string>
+        <key>author</key>
+        <string>Фёдар Дастаеўскі</string>
+        <key>title</key>
+        <string>Злачынства і пакаранне</string>
+    </dict>
+    <dict>
+        <key>imageName</key>
+        <string>nineteen_eighty_four</string>
+        <key>description</key>
+        <string>Антыўтопія пра таталітарнае грамадства</string>
+        <key>author</key>
+        <string>Джордж Оруэл</string>
+        <key>title</key>
+        <string>1984</string>
+    </dict>
+</array>
+</plist>

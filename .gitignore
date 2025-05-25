@@ -9,5 +9,5 @@ DerivedData/
 .build/
 
 # Xcode-проекты
-xcuserdata/
-!BookLibrary.xcodeproj
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/

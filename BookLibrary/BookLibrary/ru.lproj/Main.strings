@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; configuration.title = "Войти"; ObjectID = "FwD-qE-M6i"; */
+"FwD-qE-M6i.configuration.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FwD-qE-M6i"; */
+"FwD-qE-M6i.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "NgL-ev-gWT"; */
+"NgL-ev-gWT.placeholder" = "Пароль";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "O7x-LL-B0v"; */
+"O7x-LL-B0v.text" = "Title";
+
+/* Class = "UITextField"; placeholder = "Логин"; ObjectID = "TS3-5J-w0o"; */
+"TS3-5J-w0o.placeholder" = "Логин";
+
+/* Class = "UILabel"; text = "Author"; ObjectID = "ips-LE-bES"; */
+"ips-LE-bES.text" = "Author";
+
+/* Class = "UITextView"; text = "Description"; ObjectID = "uIt-Lo-wmK"; */
+"uIt-Lo-wmK.text" = "Description";
+
+/* Class = "UILabel"; text = "Book"; ObjectID = "v5X-FV-xWV"; */
+"v5X-FV-xWV.text" = "Book";

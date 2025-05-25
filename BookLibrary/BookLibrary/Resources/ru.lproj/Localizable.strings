@@ -1,0 +1,8 @@
+"login_placeholder" = "Логин";
+"password_placeholder" = "Пароль";
+"login_button" = "Войти";
+"login_error" = "Заполните все поля";
+"error_title" = "Ошибка";
+"books_title" = "Библиотека";
+"book_author" = "Автор: %@";
+"back_button" = "Назад";
