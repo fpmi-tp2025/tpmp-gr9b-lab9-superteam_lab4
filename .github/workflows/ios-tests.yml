@@ -20,16 +20,18 @@ jobs:
       run: |
         sudo xcode-select -s /Applications/Xcode.app # Убеждаемся, что используется правильная версия Xcode
 
-    - name: Run Unit Tests
-      run: |
-        xcodebuild test \
-          -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
-          -scheme BookLibraryTests \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+- name: Run Unit Tests
+  run: |
+    xcodebuild test \
+      -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
+      -scheme BookLibraryTests \
+      -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+      -allowProvisioningUpdates
 
-    - name: Run UI Tests
-      run: |
-        xcodebuild test \
-          -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
-          -scheme BookLibraryUITests \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+- name: Run UI Tests
+  run: |
+    xcodebuild test \
+      -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
+      -scheme BookLibraryUITests \
+      -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+      -allowProvisioningUpdates
