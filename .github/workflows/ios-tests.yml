@@ -9,7 +9,7 @@ on:
       - main # Триггер на pull request в основную ветку
 
 jobs:
-  run-tests:
+  build-and-test:
     runs-on: macos-latest # Используем macOS, так как Xcode работает только на macOS
 
     steps:
@@ -23,13 +23,13 @@ jobs:
     - name: Run Unit Tests
       run: |
         xcodebuild test \
-          -workspace project.xcworkspace \
+          -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
           -scheme BookLibraryTests \
           -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
 
     - name: Run UI Tests
       run: |
         xcodebuild test \
-          -workspace project.xcworkspace \
+          -workspace BookLibrary/BookLibrary.xcodeproj/project.xcworkspace \
           -scheme BookLibraryUITests \
           -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
