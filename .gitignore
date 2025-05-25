@@ -1,0 +1,13 @@
+# macOS служебные файлы
+.DS_Store
+
+# Xcode
+xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.build/
+
+# Xcode-проекты
+*.xcodeproj
+!default.xcodeproj

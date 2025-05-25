@@ -1,0 +1,8 @@
+"login_placeholder" = "Username";
+"password_placeholder" = "Password";
+"login_button" = "Login";
+"login_error" = "Please fill all fields";
+"error_title" = "Error";
+"books_title" = "Library";
+"book_author" = "Author: %@";
+"back_button" = "Back";
