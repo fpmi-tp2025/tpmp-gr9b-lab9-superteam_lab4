@@ -36,9 +36,16 @@ jobs:
           -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
           -resultBundlePath UITestResults
 
+    - name: Check Test Results Existence
+      run: |
+        if [ ! -d "TestResults" ]; then
+          echo "Directory 'TestResults' does not exist."
+          exit 1
+        fi
+
     - name: Upload Test Results
       if: always() # Загружаем результаты даже если тесты упали
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: TestResults
         path: TestResults
