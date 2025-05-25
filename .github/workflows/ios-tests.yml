@@ -9,7 +9,7 @@ on:
       - main # Триггер на pull request в основную ветку
 
 jobs:
-  build-and-test:
+  run-tests:
     runs-on: macos-latest # Используем macOS, так как Xcode работает только на macOS
 
     steps:
@@ -25,19 +25,11 @@ jobs:
         xcodebuild test \
           -workspace project.xcworkspace \
           -scheme BookLibraryTests \
-          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
-          -resultBundlePath TestResults
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
 
-    - name: Check Test Results Existence
+    - name: Run UI Tests
       run: |
-        if [ ! -d "TestResults" ]; then
-          echo "Directory 'TestResults' does not exist."
-          exit 1
-        fi
-
-    - name: Upload Test Results
-      if: always() # Загружаем результаты даже если тесты упали
-      uses: actions/upload-artifact@v3
-      with:
-        name: TestResults
-        path: TestResults
+        xcodebuild test \
+          -workspace project.xcworkspace \
+          -scheme BookLibraryUITests \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
