@@ -1,0 +1,44 @@
+name: iOS Tests
+
+on:
+  push:
+    branches:
+      - main # Триггер на push в основную ветку
+  pull_request:
+    branches:
+      - main # Триггер на pull request в основную ветку
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest # Используем macOS, так как Xcode работает только на macOS
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3 # Клонируем репозиторий
+
+    - name: Install Dependencies
+      run: |
+        sudo xcode-select -s /Applications/Xcode.app # Убеждаемся, что используется правильная версия Xcode
+
+    - name: Run Unit Tests
+      run: |
+        xcodebuild test \
+          -workspace project.xcworkspace \
+          -scheme BookLibraryTests \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+          -resultBundlePath TestResults
+
+    - name: Run UI Tests
+      run: |
+        xcodebuild test \
+          -workspace project.xcworkspace \
+          -scheme BookLibraryUITests \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+          -resultBundlePath UITestResults
+
+    - name: Upload Test Results
+      if: always() # Загружаем результаты даже если тесты упали
+      uses: actions/upload-artifact@v3
+      with:
+        name: TestResults
+        path: TestResults
